@@ -224,3 +224,27 @@ SELECT MAX (population) FROM countries;
 SELECT MIN (population) FROM countries;
 SELECT AVG (population) FROM countries;
 SELECT AVG (population) AS avg_population FROM countries GROUP BY name HAVING area_sq_km <450;
+
+Famous People
+
+CREATE TABLE famous_people (
+    name TEXT, 
+    profession TEXT, 
+    age INTEGER);
+
+INSERT INTO famous_people (name, profession, age) 
+    VALUES ("Christiano Ronaldo", "soccer player", "37");
+
+INSERT INTO famous_people (name, profession, age)
+    VALUES ("Kylie Jenner", "business mogul", "24");
+    
+INSERT INTO famous_people (name, profession, age)
+    VALUES ("Dwayne Johnson", "actor", "49");
+    
+INSERT INTO famous_people (name, profession, age)
+    VALUES ("Selena Gomez", "actress", "29");
+    
+SELECT * FROM famous_people;
+
+SELECT * FROM famous_people WHERE "profession" = "actor";
+SELECT * FROM famous_people WHERE "age" <30;
