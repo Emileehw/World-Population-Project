@@ -1,4 +1,6 @@
-# worldpopdig
+# my sql portfolio
+
+World Populations Data Dig
 
 CREATE TABLE countries(
    name                    TEXT PRIMARY KEY,
@@ -214,15 +216,11 @@ INSERT INTO countries(name,population,percent_one_year_change,population_change,
 INSERT INTO countries(name,population,percent_one_year_change,population_change,density_per_sq_km,area_sq_km,net_migrants,fertility_rate,median_age,percent_of_world_pop) VALUES ('Seychelles',98347,0.62,608,214,460,-200,2.50,34.00,0);
 INSERT INTO countries(name,population,percent_one_year_change,population_change,density_per_sq_km,area_sq_km,net_migrants,fertility_rate,median_age,percent_of_world_pop) VALUES ('Antigua and Barbuda',97929,0.84,811,223,440,0,2.00,34.00,0);
 
-SELECT * FROM countries;
-
-SELECT name FROM countries WHERE population >100000 AND area_sq_km <900;
+SELECT name FROM countries WHERE population >100000 AND area_sq_km >900;
 SELECT AVG (median_age) FROM countries;
-SELECT name, MAX (median_age) FROM countries;
-SELECT name, MIN (median_age) FROM countries;
-SELECT name, MAX (population) FROM countries;
-SELECT name, MIN (population) FROM countries;
+SELECT MAX (median_age) FROM countries;
+SELECT MIN (median_age) FROM countries;
+SELECT MAX (population) FROM countries;
+SELECT MIN (population) FROM countries;
 SELECT AVG (population) FROM countries;
-SELECT name, AVG (population) AS avg_population FROM countries GROUP BY name HAVING area_sq_km <450;
-
-SELECT name, density_per_sq_km FROM countries WHERE population >ROUND(3*(38774455.014925376)) AND fertility_rate >2 GROUP BY name;
+SELECT AVG (population) AS avg_population FROM countries GROUP BY name HAVING area_sq_km <450;
