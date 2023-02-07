@@ -1,3 +1,3 @@
-# Emilee's SQL Portfolio
+# World Population Data Project
 
-In this repository are the SQL queries that I wrote, along with the corresponding data it pulled in my spreadsheet.
+I used a database of world populations info to do a data dig. My SQL queries from that project are here, along with the results of that project in the spreadsheet.
